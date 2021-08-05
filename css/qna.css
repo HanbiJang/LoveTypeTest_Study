@@ -1,0 +1,30 @@
+#qna{
+  display: none;
+}
+
+.qBox{
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 24px;
+  width: 80%;
+}
+
+.answerList{
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 20px;
+
+  display: block;
+  font-size: 22px;
+
+  width: 80%;
+  border-color: gray;
+  border-style: dashed;
+  /* border: 0px; */
+}
+
+.answerList:hover, .answerList.focused{
+  background-color: pink;
+
+}

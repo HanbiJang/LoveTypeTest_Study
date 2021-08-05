@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+    <title></title>
+    <!-- 부트스트랩 css부분 사용 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- 메인과 디폴트 -->
+    <link rel ="stylesheet" href = "./css/default.css">
+    <link rel ="stylesheet" href = "./css/main.css">
+    <!-- qna -->
+    <link rel ="stylesheet" href = "./css/qna.css">
+    <!-- 애니메이션 -->
+    <link rel ="stylesheet" href = "./css/animation.css">
+
+    <!-- 폰트  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
+
+
+  </head>
+  <!-- 컨테이너  -->
+  <body>
+    <div class="container">
+      <section id="main" class= "mx-auto mt-5 mb-5 pb-4 px-3">
+        <h2 class="pt-4"> 십이간지로 알아보는 연애유형 </h2>
+
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+          <img src="./img/main.png" alt="mainImg" class="img-fluid" >
+        </div>
+
+        <p>
+          나만의 MBTI 사이트입니다! <br>
+          아래 시작하기 버튼을 눌러 시작해주세요.
+        </p>
+
+        <button type="button" class="btn btn-outline-info"
+          onclick="js:begin()">시작하기</button>
+      </section>
+    </div>
+
+    <!-- 질문 섹션 -->
+    <section id="qna">
+      <!-- 질문 -->
+      <div class="qBox my-5 py-3 mx-5 mx-auto"></div>
+      <!-- 선택지 -->
+      <div class="answerBox my-5 py-3 mx-5 mx-auto"></div>
+    </section>
+
+    <!-- 결과  -->
+    <section id="result">
+    </section>
+
+    <!-- 화면 전환 -->
+    <script src="./js/start.js" charset="utf-8"></script>
+
+    <!-- 데이터 연결 -->
+    <script src="./js/data.js" charset="utf-8"></script>
+
+  </body>
+</html>
