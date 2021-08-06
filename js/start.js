@@ -129,19 +129,20 @@ function setResult(){
   const resultName = document.querySelector('.resultName');
   resultName.innerHTML = infoList[point].name;
 
+//이미지 설정
   var resultImg = document.createElement('img'); //이미지 만들기
   const imgDiv = document.querySelector('#resultImg'); //이미지의 div 태그 선택해서 저장
 
   var imgURL = 'img/image-' +point + '.png';
   resultImg.src = imgURL; //주소값
   resultImg.alt = point; //공유하기 기능 관련
+  resultImg.classList.add('img-fluid');
   imgDiv.appendChild(resultImg);
 
 //resultName 설정
 
   const resultDesc = document.querySelector('.resultDesc');//연결하기
   resultDesc.innerHTML = infoList[point].desc;
-
 
 
 }
