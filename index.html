@@ -37,6 +37,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap"
     rel="stylesheet">
 
+    <!-- 카카오톡 공유 기능 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <!-- 초기화 하기  -->
+    <script>
+      // Kakao.init('JAVASCRIPT_KEY');
+      Kakao.init('cd29eecce7a6fd86f3603311ffd2f43a');
+      Kakao.isInitialized();
+    </script>
     <!-- result 부분  -->
     <link rel ="stylesheet" href="./css/result.css"
 
@@ -52,9 +60,9 @@
         </div>
 
         <p>
-          너의 연애 유형이 궁금하지 않ah?  <br>
-          아래 [시작하기] 버튼을 눌러서 시작해bwa.<br>
-          어느 점집보다도 정확하다는 걸 보장할gae... ♪
+          너의 연애 유형이 궁금하지 않A?  <br>
+          아래 [시작하기] 버튼을 눌러서 시작해Bwa.<br>
+          어느 점술가보다도 정확하다는 걸 보장할Gae... ♪
         </p>
 
         <button type="button" class="btn btn-outline-info mt-2"
@@ -88,7 +96,7 @@
 
       <div class="resultDesc mt-3"></div>
 
-      <button type="button" class="kakao mt-5 py-20 px-20">공유하기</button>
+      <button type="button" class="kakao mt-5 py-20 px-20" onclick = "js:setShare()">공유하기</button>
     </section>
 
     <!-- 화면 전환 -->
@@ -96,6 +104,9 @@
 
     <!-- 데이터 연결 -->
     <script src="./js/data.js" charset="utf-8"></script>
+
+    <!-- 카카오톡 공유하기 -->
+    <script src= "./js/share.js" charset="utf-8"></script>
 
   </body>
 </html>

@@ -5,8 +5,14 @@
   width: 80%;
   text-align: center;
   border-radius: 20px;
+}
 
+#shareResult{
 
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .resultDesc{
@@ -28,4 +34,17 @@
   background-color: whitesmoke;
   color : black;
   border-color: #FEE500;
+}
+
+.gohome{
+  color: black;
+  background-color: lightblue;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.gohome:hover, .kakao.focused{
+  background-color: whitesmoke;
+  color : black;
+  border-color: lightblue;
 }
