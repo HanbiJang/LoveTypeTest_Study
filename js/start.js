@@ -21,7 +21,9 @@ function begin(){
         qna.style.display = "block";
 
     },450);
-    let qIdx = 0;
+
+    typingIdx = 0;
+    qBox.textContent = "";
     goNext(qIdx);
 
   },450);
@@ -56,9 +58,6 @@ function addAnswer(answerText , qIdx, idx){
     }
 
     setTimeout(()=>{ //950ms 뒤에 실행됨
-
-      //select[qIdx] = idx; //qIdx 번째 질문인덱스에 = 몇번째 버튼인지 idx 저장
-
       var target = qnaList[qIdx].a[idx].type;
       for(let i=0; i<target.length; i++){
         select[target[i]]++;
@@ -68,7 +67,11 @@ function addAnswer(answerText , qIdx, idx){
         children[i].style.display= 'none';
       }
 
-      goNext(++qIdx); //다음 질문 가져오기
+      typingIdx = 0;
+      qBox.textContent = "";
+      qIdx += 1;
+      console.log( typingIdx,qIdx);
+      goNext(qIdx); //다음 질문 가져오기
 
     },950)
 
@@ -79,14 +82,16 @@ function addAnswer(answerText , qIdx, idx){
 
 //qIdx에 해당하는 질문과 선택지 버튼을 가져오는 함수
 function goNext(qIdx){
+
   if(qIdx === endPoint){
     goResult();
     return;
   }
 
-  var q = document.querySelector('.qBox'); //index.html의 변수 qBox //질문 영역
-  q.innerHTML = qnaList[qIdx].q; //data의 질문 리스트의 첫번째 요소를 가져와서 q에 넣음
+  content = qnaList[qIdx].q;
 
+  var q = document.querySelector('.qBox'); //index.html의 변수 qBox //질문 영역
+  //q.innerHTML = qnaList[qIdx].q; //data의 질문 리스트의 첫번째 요소를 가져와서 q에 넣음
 
   //스테이터스 바 구현
   fixV = (100/endPoint)*(qIdx+1);

@@ -1,35 +1,87 @@
+
+/* 질문 박스 */
 #qna{
   display: none;
 }
 
-.qBox{
-  background-color: whitesmoke;
+.qBox {
+	position: relative;
+	background: whitesmoke;
+	border-radius: .4em;
+
+  font-weight: bolder;
+  margin: 10px;
+  padding: 10px;
   text-align: center;
-  border-radius: 20px;
-  font-size: 24px;
+  font-size: 20px;
   width: 80%;
 }
 
-.answerList{
-  background-color: whitesmoke;
+.qBox:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 90%;
+	width: 0;
+	height: 0;
+	border: 19px solid transparent;
+	border-top-color: whitesmoke;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -9.5px;
+	margin-bottom: -19px;
   text-align: center;
-  border-radius: 20px;
+}
 
+/* 선택지 영역 */
+.answerList,
+.answerList::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.answerList {
+  border-radius: 20px;
+  font-size: 20px;
+  width: 80%;
+
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
   display: block;
-  font-size: 22px;
-
-  width: 80%;
-  border-color: gray;
-  border-style: dashed;
-  /* border: 0px; */
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
 }
 
-.answerList:hover, .answerList.focused{
-  background-color: pink;
+.answerList::before,
+.answerList::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
 
+.answerList:hover {
+  color: #2ecc71;
+}
+
+.answerList::after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+}
+
+.answerList:hover:after {
+  width: 100%;
 }
 
 
+/* 진행도 */
 .status{
   height: 15px;
   width: 80%;
@@ -43,11 +95,11 @@
   width: 10%;
   border-radius: 50px;
   /*출처 : https://www.colorzilla.com/gradient-editor*/
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
-  background: #f5f6f6; /* Old browsers */
-  background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fceabb+0,fccd4d+50,f8b500+51,fbdf93+100;Orange+3D+%235 */
+  background: #fceabb; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
 
 }

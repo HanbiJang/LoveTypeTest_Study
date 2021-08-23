@@ -5,7 +5,7 @@ function setShare(){
   var resultImg = document.querySelector('#resultImg');
   var resultAlt = resultImg.firstElementChild.alt; //resultImg 존에 스크립트로 child로써 이미지를 넣어줬었음(start.js 에서)
 
-  const shareTitle = '연애유형 결과';
+  const shareTitle = '나의 게임 속 직업 결과';
   const shareDes = infoList[resultAlt].name;
   const shareImg = url + '/img/image-' + resultAlt + '.png';
   const sharLink = url + '/results/result-' + resultAlt + '.html';
