@@ -6,9 +6,10 @@
 - 선택지에 따라 다른 결과 도출
 - 카카오 결과 공유
 
-### 참조 강의 출처
-https://www.inflearn.com/course/%EC%8B%AC%EB%A6%AC%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%9E%91
-
 ![20220721_132848_1](https://user-images.githubusercontent.com/68460391/180129939-cbdfdc95-159a-4375-ab71-1ba87918d9db.png)
 ![20220721_132848_2](https://user-images.githubusercontent.com/68460391/180129944-1a7ef4fe-fa03-4ac0-ad1b-618674940d20.png)
 ![20220721_132848_3](https://user-images.githubusercontent.com/68460391/180129948-5cdf3625-43f0-4eb7-920b-56118f0b1f16.png)
+
+
+### 참조 강의 출처
+https://www.inflearn.com/course/%EC%8B%AC%EB%A6%AC%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%9E%91
